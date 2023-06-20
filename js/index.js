@@ -26,13 +26,6 @@ const _apiKey = 'apikey=dsasdj238sf4skgha';
 
 const bool = false;
 
-// console.log(something);
-
-let und;
-
-// console.log(und);
-
-
 const obj = {
     name: "John",
     age: 24,
