@@ -1,41 +1,33 @@
-const carBodyWidth = 5000,
-      carBodyHeight = 4000;
+"use strict";
 
-// console.log("Ширина кузова автомобиля:" + a + ', длина ' + b);
+// if (4 == 9) {
+//     console.log("OK!");
+// } else {
+//     console.log("Error");
+// }
 
+const num = 50;
 
-// ['yuru', 'agad', 'gjasd'],map(a =>)
+// if(num < 49) {
+//     console.log('Error');
+// } else{
+//     console.log('Ok!');
+// }
 
-//request
+(num < 49) ? console.log('Error') : console.log('Ok!');
 
+switch (num) {
+    case 49: 
+        console.log('Error');
+        break;
+    case 100:
+        console.log('Error');
+        break
+    case 50:
+        console.log('Good');
+        break;
+    default:
+        console.log("Another time");
+        break;
 
-// snake_case
-// UPPER_SNAKE_CASE
-// Kebab-case
-// PascalCase
-
-let COLOR_RED = '#F00';
-
-const _apiBase = 'https//gateway..marvel.com:443/api';
-
-//api key
-const _apiKey = 'apikey=dsasdj238sf4skgha';
-
-
-// console.log(4/0);
-
-const bool = false;
-
-const obj = {
-    name: "John",
-    age: 24,
-    isMarried: false
 }
-
-// console.log(obj.name)
-console.log(obj["name"]);
-
-let arr = ['plum.png', 'orange.jpg', 'apple.bmp', {}, []];
-console.log(arr[1]);
-
-
