@@ -71,31 +71,31 @@
 
 
 // Место для первой задачи
-function firstTask() {
-    // Пишем решение вот тут
-    for (let i = 5; i < 11; i++) {
-        console.log(i);
-    }
+// function firstTask() {
+//     // Пишем решение вот тут
+//     for (let i = 5; i < 11; i++) {
+//         console.log(i);
+//     }
     
-}
+// }
 
-// Место для второй задачи
-function secondTask() {
-    // Пишем решение вот тут
-    for (let i = 0; i < 7; i++ ) {
-        console.log(20 - +i)
-    }
+// // Место для второй задачи
+// function secondTask() {
+//     // Пишем решение вот тут
+//     for (let i = 0; i < 7; i++ ) {
+//         console.log(20 - +i)
+//     }
     
-}
+// }
 
-// Место для третьей задачи
-function thirdTask() {
-    // Пишем решение вот тут
-    for (let i = 1; i <= 5; i++) {
-        console.log(i * 2);
-    }
+// // Место для третьей задачи
+// function thirdTask() {
+//     // Пишем решение вот тут
+//     for (let i = 1; i <= 5; i++) {
+//         console.log(i * 2);
+//     }
     
-}
+// }
 
 // Место для четвертой задачи
 
@@ -109,78 +109,94 @@ function thirdTask() {
 //     }
 // }
 
-function fourthTask() {
-    // Пишем решение вот тут
+// function fourthTask() {
+//     // Пишем решение вот тут
     
-    let i = 2
-    while (i <= 16) {
-        if (i % 2 !== 0) {
-            console.log(i);
-        }
-        i++;
-    }
-}
+//     let i = 2
+//     while (i <= 16) {
+//         if (i % 2 !== 0) {
+//             console.log(i);
+//         }
+//         i++;
+//     }
+// }
 
-// Место для пятой задачи
+// // Место для пятой задачи
 
-function fifthTask() {
-    const arrayOfNumbers = [];
+// function fifthTask() {
+//     const arrayOfNumbers = [];
 
-    // Пишем решение вот тут
-        for (let i = 5; i <= 10; i++) {
-        arrayOfNumbers[i - 5] = i;
-    }
+//     // Пишем решение вот тут
+//         for (let i = 5; i <= 10; i++) {
+//         arrayOfNumbers[i - 5] = i;
+//     }
     
-    // Не трогаем
-    return arrayOfNumbers;
-}
+//     // Не трогаем
+//     return arrayOfNumbers;
+// }
 
 
 
-function firstTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const arr = [3, 5, 8, 16, 20, 23, 50];
-    const result = [];
+// function firstTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const arr = [3, 5, 8, 16, 20, 23, 50];
+//     const result = [];
 
-    // Пишем решение вот тут
-    for (i = 0; i < arr.length; i++) {
-        result[i] = arr[i];
-    }
+//     // Пишем решение вот тут
+//     for (i = 0; i < arr.length; i++) {
+//         result[i] = arr[i];
+//     }
     
-    // Не трогаем
-    return result;
-}
+//     // Не трогаем
+//     return result;
+// }
 
-console.log(firstTask())
+// console.log(firstTask())
 
 
-function secondTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const data = [5, 10, 'Shopping', 20, 'Homework'];
+// function secondTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const data = [5, 10, 'Shopping', 20, 'Homework'];
 
-    // Пишем решение вот тут
-    for (i = 0; i < data.length; i++) {
-        if(typeof(data[i]) == "number") {
-            data[i] = data[i] * 2;
-        } else {
-            data[i] = data[i] + " - done";
-        }
+//     // Пишем решение вот тут
+//     for (i = 0; i < data.length; i++) {
+//         if(typeof(data[i]) == "number") {
+//             data[i] = data[i] * 2;
+//         } else {
+//             data[i] = data[i] + " - done";
+//         }
         
-    }
+//     }
     
-    // Не трогаем
-    return data;
+//     // Не трогаем
+//     return data;
+// }
+
+// console.log(secondTask())
+
+
+// const data = [5, 10, 'Shopping', 20, 'Homework'];
+// const result = [];
+
+// // Пишем решение вот тут
+// for (i = 1; i <= data.length; i++) {
+//     // console.log(data.length - +i)
+//     console.log(data[+data.length - i])
+//     result[i] = data[data.length - i]
+// }
+
+
+const lines = 5;
+let result = '';
+// Проверяется именно переменная result, формируйте строку в ней
+for (let i = 0; i <= lines; i++) {
+    for (let j = 0; j < lines - i; j++) {
+        result += " ";
+    }
+    for (let j = 0; j < 2 * i + 1; j++) {
+        result += "*";
+    }
+    result += "\n";
 }
 
-console.log(secondTask())
-
-
-const data = [5, 10, 'Shopping', 20, 'Homework'];
-const result = [];
-
-// Пишем решение вот тут
-for (i = 1; i <= data.length; i++) {
-    // console.log(data.length - +i)
-    console.log(data[+data.length - i])
-    result[i] = data[data.length - i]
-}
+console.log(result);
