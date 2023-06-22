@@ -1,202 +1,51 @@
-// "use strict";
+/* Задание на урок:
 
-// let num = 50;
+1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
 
-// while (num <= 55) {
-//     console.log(num);
-//     num++;
-// }
+2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+возвращаем пользователя к вопросам опять. (К любой строке можно обратиться как 
+str.length - и получить её длину)
 
+3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 
-// do {
-//     console.log(num);
-//     num++;
-// }
-// while (num < 55);
+4) Потренироваться и переписать цикл еще двумя способами*/
 
-// for (let i = 1; i < 10; i++) {
-//     if (i == 6) {
-//         continue;
-//     }
-//     console.log(i);
-// }
+'use strict';
 
-// for (let i = 0; i < 3; i++) {
-//     console.log(i);
-//     for (let j = 0; j < 3; j++) {
-//         console.log(j);
-//     }
-// }
-// let result = '';
-// const length = 7;
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// for (let i = 1; i < length; i++) {
-//     for (let j = 0; j < i; j++) {
-//         result += '*';
-//     }
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-//     result += '\n';
-// }
-
-// console.log(result);
-
-
-// first: for (let i = 0; i < 3; i++) {
-//     console.log(`First level: ${i}`);
-//     for (let j = 0; j < 3; j++) {
-//         console.log(`Second level: ${j}`);
-//         for (let k = 0; k < 5; k++) {
-//             if (k === 2) continue first;
-//             console.log(`Third level: ${k}`);
-//         }
-//     }
-// }
-
-
-// for (let i = 2; i <= 16; i++) {
-//     if (i % 2 === 0) {
-//         continue;
-//     } else {
-//         console.log(i);
-//     }
-// }
-
-// let i = 2
-// while (i <= 16) {
-//     if (i % 2 !== 0) {
-//         console.log(i);
-//     }
-//     i++;
-// }
-
-
-// Место для первой задачи
-// function firstTask() {
-//     // Пишем решение вот тут
-//     for (let i = 5; i < 11; i++) {
-//         console.log(i);
-//     }
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?', ''),
+          b = prompt('На сколько оцените его?', '');
     
-// }
-
-// // Место для второй задачи
-// function secondTask() {
-//     // Пишем решение вот тут
-//     for (let i = 0; i < 7; i++ ) {
-//         console.log(20 - +i)
-//     }
-    
-// }
-
-// // Место для третьей задачи
-// function thirdTask() {
-//     // Пишем решение вот тут
-//     for (let i = 1; i <= 5; i++) {
-//         console.log(i * 2);
-//     }
-    
-// }
-
-// Место для четвертой задачи
-
-// Цикл, который нужно переписать:
-
-// for (let i = 2; i <= 16; i++) {
-//     if (i % 2 === 0) {
-//         continue;
-//     } else {
-//         console.log(i);
-//     }
-// }
-
-// function fourthTask() {
-//     // Пишем решение вот тут
-    
-//     let i = 2
-//     while (i <= 16) {
-//         if (i % 2 !== 0) {
-//             console.log(i);
-//         }
-//         i++;
-//     }
-// }
-
-// // Место для пятой задачи
-
-// function fifthTask() {
-//     const arrayOfNumbers = [];
-
-//     // Пишем решение вот тут
-//         for (let i = 5; i <= 10; i++) {
-//         arrayOfNumbers[i - 5] = i;
-//     }
-    
-//     // Не трогаем
-//     return arrayOfNumbers;
-// }
-
-
-
-// function firstTask() {
-//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-//     const arr = [3, 5, 8, 16, 20, 23, 50];
-//     const result = [];
-
-//     // Пишем решение вот тут
-//     for (i = 0; i < arr.length; i++) {
-//         result[i] = arr[i];
-//     }
-    
-//     // Не трогаем
-//     return result;
-// }
-
-// console.log(firstTask())
-
-
-// function secondTask() {
-//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-//     const data = [5, 10, 'Shopping', 20, 'Homework'];
-
-//     // Пишем решение вот тут
-//     for (i = 0; i < data.length; i++) {
-//         if(typeof(data[i]) == "number") {
-//             data[i] = data[i] * 2;
-//         } else {
-//             data[i] = data[i] + " - done";
-//         }
-        
-//     }
-    
-//     // Не трогаем
-//     return data;
-// }
-
-// console.log(secondTask())
-
-
-// const data = [5, 10, 'Shopping', 20, 'Homework'];
-// const result = [];
-
-// // Пишем решение вот тут
-// for (i = 1; i <= data.length; i++) {
-//     // console.log(data.length - +i)
-//     console.log(data[+data.length - i])
-//     result[i] = data[data.length - i]
-// }
-
-
-const lines = 5;
-let result = '';
-// Проверяется именно переменная result, формируйте строку в ней
-for (let i = 0; i <= lines; i++) {
-    for (let j = 0; j < lines - i; j++) {
-        result += " ";
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
     }
-    for (let j = 0; j < 2 * i + 1; j++) {
-        result += "*";
-    }
-    result += "\n";
 }
 
-console.log(result);
+if (personalMovieDB.count < 10) {
+    console.log('Просмотренно довольно мало фильмов');
+} else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+    console.log('Вы класический эритель');
+} else if (personalMovieDB.count >= 30) {
+    console.log('Вы киноман');
+} else {
+    console.log("произишла ошибвка")
+}
+
+console.log(personalMovieDB);
