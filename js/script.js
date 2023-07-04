@@ -1,42 +1,70 @@
-"use strict";
+const usdRate = 28;
+const discount = 0.5;
 
-let num = 20;
+// function convert (amount, rate) {
+//     return rate * amount;
+// }
 
-//Function declaration
-function showFirstMessage(text) {
-    console.log(text);
-    let num = 10;
-    console.log(num);
+// function promotion(result) {
+//     console.log(result * discount);
+// }
+
+// promotion(convert(500, usdRate));
+
+// function test() {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(i);
+//         if(i === 3) return;
+//     }
+//     console.log('Done');
+// }
+
+// test();
+
+function doNothing() {}
+console.log(doNothing() === undefined)
+
+function sayHello(name) {
+    return ("Привет, " + name + "!");
 }
 
-showFirstMessage("Hello");
-console.log(num);
+console.log(sayHello("Anton"));
 
-function calc(a, b) {
-    return (a + b);
+function returnNeighboringNumbers(number) {
+    return [--number, ++number, number+1]
 }
 
-console.log(calc(5, 9));
-console.log(calc(5, 3));
-console.log(calc(4, 9));
-console.log(calc(6, 9));
+console.log(returnNeighboringNumbers(5));
 
-function ret() {
-    let num = 50;
-
-    return num;
+function getMathResult(num, times) {
+    if(typeof(times) !== 'number' || times <= 0){
+        return num;
+    }
+    let str;
+    for (let i = 1; i <= times; i++ )
+    {
+        if (i === times) {
+            str += `${num * i}`;
+        } else {
+            str += `${num * i}---`;
+        }
+        return str;
+    }
 }
 
-const aNotherNum = ret();
-console.log(aNotherNum);
+let fruit = 'some fruit';
+console.log(fruit.indexOf('fruit'));
 
+const logg = "Hello world";
+console.log(logg.slice(fruit.indexOf('fruit'), 11));
+console.log(logg.slice(-5, -1));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 5));
 
-// Function Expression
-const logger = function () {
-    console.log("Hello");
-};
-logger();
+const numbers = 12.2;
+console.log(Math.round(numbers));
 
-//Arrows functions
+const test = "12.2px";
 
-const calc = (a, b) => a + b;
+console.log(parseInt(test));
+console.log(parseFloat(test));
