@@ -12,13 +12,13 @@
 
 // start();
 
-const personalMovieDb = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: {},
-    privat: false
-};
+// const personalMovieDb = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: {},
+//     privat: false
+// };
 
 // function rememberMyFIlms() {
 //     for (let i = 0; i < 2; i++) {
