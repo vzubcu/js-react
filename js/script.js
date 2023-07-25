@@ -1,93 +1,44 @@
 'user strict';
 
-let str = "some";
-let strObj = new String(str);
+//To String
 
-// console.log(typeof(str));
-// console.log(typeof(strObj));
+// !)
 
-// console.dir([1,2,3]);
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
 
-const soldier = {
-    health: 400,
-    armor: 100,
-    sayHello: function() {
-        console.log("Hello");
-    }
-};
+// 2) 
+console.log(typeof(null + ''));
 
-const john = Object.create(soldier);
-// const john = {
-//     health: 100
-// };
+const num = 5;
 
-// john.__proto__ = soldier;
+console.log("https://vk.com/catalog/" + num);
 
-// Object.setPrototypeOf(john, soldier);
+const fronSize = 26 + 'px';
 
-// console.log(john.armor);
-// john.sayHello()
+//TO Number 
+//1)
 
-const shoppingMallData = {
-    shops: [
-        {
-            width: 10,
-            length: 5
-        },
-        {
-            width: 15,
-            length: 7
-        },
-        {
-            width: 20,
-            length: 5
-        },
-        {
-            width: 8,
-            length: 10
-        }
-    ],
-    height: 5,
-    moneyPer1m3: 30,
-    budget: 50000
+console.log(typeof(Number('4')));
+
+// 2)
+console.log(typeof(+'5'));
+
+// 3)
+console.log(typeof(parseInt("15px", 10)));
+
+// let answ = +prompt("Hello", "");
+
+// To boolean
+
+// 0, '', null, undefined, NaN;
+let switcher = 1;
+if (switcher) {
+    console.log('Working....');
 }
+//2)
+console.log(typeof(Boolean('4')));
 
-function isBudgetEnough(data) {
-    let square = 0;
-    let volume = 0;
+//3)
 
-    data.shops.forEach(shop => {
-        square += shop.width * shop.length;
-    });
-
-    volume = data.height * square;
-
-    if (data.budget - (volume * data.moneyPer1m3) >= 0) {
-        return 'Бюджета достаточно';
-    } else {
-        return 'Бюджета недостаточно';
-    }
-}
-
-// console.log(isBudgetEnough(shoppingMallData));
-
-const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
-
-function sortStudentsByGroups(arr) {
-    arr.sort();
-    const a = [], b = [], c = [], rest = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (i < 3) {
-            a.push(arr[i]);
-        } else if (i < 6) {
-            b.push(arr[i]);
-        } else if (i < 9) {
-            c.push(arr[i]);
-        } else {
-            rest.push(arr[i]);
-        }
-    }
-    return [a,b,c, `Оставшиеся студенты: ${rest.length === 0 ? '-' : rest.join(', ')}`]
-}
-console.log(sortStudentsByGroups(students));
+console.log(typeof(!!"4444"));
